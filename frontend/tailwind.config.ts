@@ -5,8 +5,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        violet: { 950: '#090617' },
-        teal: { 300: '#5eead4' },
+        violet: {
+          500: '#8b5cf6',
+          600: '#7c3aed',
+        },
+        cyan: {
+          400: '#22d3ee',
+        },
+      },
+      boxShadow: {
+        neon: '0 0 25px rgba(168, 85, 247, 0.45)',
       },
     },
   },
