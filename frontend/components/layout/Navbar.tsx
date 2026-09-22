@@ -6,8 +6,6 @@ const navItems = [
   { href: '/listings', label: 'Listings' },
   { href: '/messages', label: 'Messages' },
   { href: '/dashboard', label: 'Dashboard' },
-  { href: '/login', label: 'Login' },
-  { href: '/signup', label: 'Signup' },
 ];
 
 export function Navbar() {
@@ -17,12 +15,22 @@ export function Navbar() {
         <Link href="/" className="text-2xl font-black tracking-tight text-white">
           BazaArts
         </Link>
+
         <div className="hidden items-center gap-6 md:flex">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className="text-sm text-slate-300 transition hover:text-violet-300">
               {item.label}
             </Link>
           ))}
+        </div>
+
+        <div className="flex items-center gap-3">
+          <Link href="/login" className="rounded-full border border-violet-400/40 px-4 py-2 text-sm text-white">
+            Login
+          </Link>
+          <Link href="/signup" className="rounded-full bg-gradient-to-r from-violet-500 to-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950">
+            Signup
+          </Link>
         </div>
       </nav>
     </header>
